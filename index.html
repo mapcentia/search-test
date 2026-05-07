@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kommune-søgning</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 0 20px;
+            color: #333;
+        }
+        h1 { margin-bottom: 20px; font-size: 1.4rem; }
+        .search-wrapper { position: relative; margin-bottom: 24px; }
+        .custom-search {
+            width: 100%;
+            padding: 12px 16px;
+            font-size: 1rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .custom-search:focus { border-color: #4a90d9; }
+        #result {
+            padding: 20px;
+            border-radius: 8px;
+            background: #f5f7fa;
+            border: 1px solid #e1e5eb;
+            min-height: 60px;
+            display: none;
+        }
+        #result.visible { display: block; }
+        #result .label { font-size: 0.85rem; color: #666; margin-bottom: 4px; }
+        #result .stor { font-size: 1.3rem; font-weight: 600; margin-top: 8px;}
+        #result .meta { font-size: 0.85rem; color: #888; margin-top: 8px; margin-bottom: 16px; }
+        .loading { color: #999; font-style: italic; }
+    </style>
+</head>
+<body>
+    <h1>Søg adresse</h1>
+    <div class="search-wrapper">
+        <input class="custom-search" type="text" placeholder="Søg adresse eller matrikel...">
+    </div>
+    <div id="result"></div>
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
