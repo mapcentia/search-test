@@ -1,5 +1,5 @@
-import danish from "@centia-io/danish-search";
-import "@centia-io/danish-search/style.css";
+import danish from "@mapcentia/danish-search";
+import "@mapcentia/danish-search/style.css";
 import { sql } from "./baas/client.js";
 
 const resultEl = document.getElementById("result");
